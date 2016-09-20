@@ -8,4 +8,5 @@ include_search: true
 pages:
   - Home: index.md
   - Getting Started: getting-started/index.md
-    - Setting up a development environment: getting-started/setting-up-a-development-environment.md
+    - Setting up a development environment: getting-started/setting-up-a-development-environment/index.md
+      - Windows: getting-started/setting-up-a-development-environment/windows.md
