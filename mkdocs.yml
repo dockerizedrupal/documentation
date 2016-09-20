@@ -7,5 +7,5 @@ repo_url: https://github.com/dockerizedrupal/documentation.git
 include_search: true
 pages:
   - Home: index.md
-  - Getting Started:
+  - Getting Started: getting-started/index.md
     - Setting up a development environment: getting-started/setting-up-a-development-environment.md
