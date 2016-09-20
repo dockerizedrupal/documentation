@@ -1,0 +1,11 @@
+site_name: Dockerized Drupal
+site_descrition: Dockerized Drupal
+site_author: Dockerized Drupal
+theme: readthedocs
+repo_name: GitHub
+repo_url: https://github.com/dockerizedrupal/documentation.git
+include_search: true
+pages:
+  - Home: index.md
+  - Getting Started:
+    - Setting up a development environment: getting-started/setting-up-a-development-environment.md
