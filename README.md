@@ -3,7 +3,7 @@
 ## Table of Content
 
 * [Getting started](https://github.com/dockerizedrupal/documentation#getting-started)
-  * [Setting up a development environment](https://github.com/dockerizedrupal/documentation#setting-up-a-development-environment9)
+  * [Setting up a development environment](https://github.com/dockerizedrupal/documentation#setting-up-a-development-environment)
     * [Windows](https://github.com/dockerizedrupal/documentation#windows)
       * [Download and install VirtualBox](https://github.com/dockerizedrupal/documentation#download-and-install-virtualbox)
       * [Download and install Vagrant](https://github.com/dockerizedrupal/documentation#download-and-install-vagrant)
