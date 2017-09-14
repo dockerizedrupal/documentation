@@ -331,6 +331,72 @@ Repository: <https://github.com/dockerizedrupal/crush>
 >
 > Makes sense, works great, to the degree I did not notice that I never noticed that what I use is not drush but crush. Well done!
 
+###### Install vhost
+
+```bash
+$ SERVER_NAME="dev"
+```
+
+```bash
+$ TMP="$(mktemp -d)"
+```
+
+```bash
+$ git clone https://github.com/dockerizedrupal/vhost.git "${TMP}"
+```
+
+```bash
+$ cd "${TMP}"
+```
+
+```bash
+$ git checkout 1.1.9
+```
+
+```bash
+$ sudo cp ./docker-compose.yml /opt/vhost.yml
+```
+
+```bash
+$ sudo sed -i "s/SERVER_NAME=localhost/SERVER_NAME=${SERVER_NAME}/" /opt/vhost.yml
+```
+
+```bash
+$ docker-compose -f /opt/vhost.yml up -d
+```
+
+Watch the following video to see it in action:
+
+[![Getting started on Linux: Install vhost](http://img.youtube.com/vi/WV3HPaJxeuM/0.jpg)](http://www.youtube.com/watch?v=WV3HPaJxeuM)
+
+**Comments**
+
+> Derek • a year ago
+>
+> Is installing vhost going to destroy all my local vhost files or is this safe to use on a machine that is already a devbox? For instance, the previous procedure kills Drush for all non-containerized sites. I can get around it by setting up a new alias to use the "old drush" but there should be a warning about these things.
+
+> Derek • a year ago
+>
+> Found out the answer is no. Nice docker integration so far! Thanks!
+
+> Bryden Arndt • a year ago
+>
+> On the final step:
+>
+> docker-compose -f /opt/vhost.yml up -d
+>
+> I get the following error:
+>
+> Invalid service name "vhost-data" - only [a-zA-Z0-9] are allowed
+>
+> I'm on Ubuntu 15.10
+
+> viljaste • a year ago
+>
+> Hi Bryden,
+>
+> I haven't seen this error message in a long time :). I think you have an older version of Docker Compose installed, which doesn't support newer naming conventions. So I suggest that you upgrade your Docker Compose to latest version.
+
 ## License
 
 **MIT**
